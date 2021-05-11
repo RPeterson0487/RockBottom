@@ -1,0 +1,211 @@
+<!--
+    Adam Barnes & Richard Peterson
+    CSC 365
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rock Bottom - Application</title>
+    <style>
+        #wrapper {
+            margin: 0 auto;
+            width: 80rem;
+            background-color: lightgrey;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #333333;
+            position: relative;
+            height: 10rem;
+            color: white;
+        }
+
+        header h1 {
+            position: absolute;
+            bottom: 10%;
+            left: 13%;
+            margin: 0;
+            padding: 0;
+            font-size: 2rem;
+        }
+
+        header img {
+            position: absolute;
+            bottom: 5%;
+            left: 1%;
+            width: 150px;
+        }
+
+        nav {
+            position: absolute;
+            left: 65%;
+            bottom: 0;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        main {
+            position: relative;
+            background-color: white;
+            width: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        nav a:hover {
+            background-color: lightgrey;
+            color: dimgray;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: white;
+            background-color: #333333;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .form-required {
+            display: inline;
+            color: #ff2825 !important
+        }
+
+        #appArea {
+            margin: 10px;
+        }
+
+        #appArea input {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        #appArea select {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body id="wrapper">
+    <header>
+        <img src="../images/rock.png" alt="Rock logo">
+        <h1>Rock Bottom Adoption Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="../../homepage.html">Home</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="appArea">
+            <h1>Adoption Application</h1>
+            <p>Please note, filling out an application does not guarantee an adoption. Once you
+                fill out the application, we ask that you meet the rock in person before adopting.<br>
+                <span class="form-required">*</span> indicates a required form
+            </p>
+            <h2>Please fill out the form below to apply</h2><br><br>
+
+
+            <form name="app" id="app">
+                <label>Which rock(s) would you like to meet? <span class="form-required">*</span>
+                    <input type="text" name="appMeet" required></label><br><br>
+                <fieldset>
+                    <legend>Personal information</legend>
+                    <label>Applicant's First Name <span class="form-required">* </span><input type="text"
+                            name="appFName" required></label>
+                    <label>Applicant's Last Name <span class="form-required">* </span><input type="text" name="appLName"
+                            required></label><br>
+                    <label>Street Address <span class="form-required">* </span><input type="text" name="appStAddr"
+                            required></label>
+                    <label>State <span class="form-required">* </span><input type="text" name="appState"
+                            required></label>
+                    <label>Zip <span class="form-required">* </span><input type="text" name="appZip"
+                            required></label><br>
+                    <label>Phone Number <span class="form-required">* </span><input type="tel" name="appPhone"
+                            required></label>
+                    <label>Email <span class="form-required">* </span><input type="email" name="appEmail"
+                            required></label>
+                </fieldset><br>
+                <fieldset>
+                    <legend>Adoption information</legend>
+                    Primary reason for adopting this rock <span class="form-required">* </span>
+                    <select name="appReason" required>
+                        <option value="">Select one:</option>
+                        <option value="1">Companion for self</option>
+                        <option value="2">Companion for other rock</option>
+                        <option value="3">Gift for someone else</option>
+                        <option value="4">Other (please explain)</option>
+                    </select>
+                    <label>Other <input type="text" name="appOther"></label><br>
+                    You plan for this rock to be <span class="form-required">* </span>
+                    <select name="appPlan" required>
+                        <option value="">Select one:</option>
+                        <option value="1">Indoor</option>
+                        <option value="2">Outdoor</option>
+                        <option value="3">Indoor / Outdoor</option>
+                    </select><br>
+                    <label>Where will the rock be when you're not at home? <span class="form-required">* </span><input
+                            type="text" name="appNotHome" required></label>
+                    <label>Where will the rock be at night? <span class="form-required">* </span><input type="text"
+                            name="appNight" required></label>
+                </fieldset><br>
+                <fieldset>
+                    <legend>Other information</legend>
+                    <label>How much time are you willing to spend helping this rock adjust to your home and lifestyle?
+                        <span class="form-required">* </span><input type="text" name="appTime" required></label><br>
+                    <label>Under what circumstances would you not keep this rock? <span class="form-required">*
+                        </span><input type="text" name="appNope" required></label><br>
+                    <label>Do you have experience and knowledge with behavior problems in rocks? <span
+                            class="form-required">* </span><input type="text" name="appExp" required></label>
+                </fieldset><br>
+                <fieldset>
+                    <legend>Please agree to the following: <span class="form-required">* </span></legend>
+                    <input type="checkbox" required><label>I have consent of all adults living in my household to adopt
+                        a pet.</label><br>
+                    <input type="checkbox" required><label>I understand that adopting a pet is a commitment not to be
+                        taken lightly.</label><br>
+                    <input type="checkbox" required><label>I understand that a rock may live billions of years or
+                        more.</label>
+                </fieldset><br>
+                <input type="submit" value="Submit" onclick="formVal()">
+            </form>
+        </div>
+    </main>
+
+    <script src="../scripts/appVal.js"></script>
+
+    <footer>
+        Adam Barnes & Richard Peterson, CSC 365 Spring 2021
+        <div>Icons made by <a href="https://creativemarket.com/eucalyp" title="Eucalyp">Eucalyp</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+</body>
+
+</html>
